@@ -67,5 +67,4 @@ class DevApplicationTests {
 	@Test
 	void contextLoads() {
 	}
-
 }

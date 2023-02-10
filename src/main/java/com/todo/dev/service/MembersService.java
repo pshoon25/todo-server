@@ -7,6 +7,7 @@ import com.todo.dev.domain.response.MemberResponse;
 import com.todo.dev.repository.MembersRepository;
 import com.todo.dev.security.SecurityService;
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -14,13 +15,15 @@ import java.lang.reflect.Member;
 
 @Service
 @AllArgsConstructor
+@Slf4j
 public class MembersService {
     private final MembersRepository membersRepository;
     private final SecurityService securityService;
 
     public MemberResponse loginService(LoginRequest request) {
         Members loginMember = membersRepository.findByIdAndPw(request);
-        if (loginMember.getMember_id() != null) {
+        log.info(loginMember.toString());
+        if (loginMember.getId() != null) {
             String token = securityService.createToken(loginMember);
             return new MemberResponse(
                     loginMember.getId(),
@@ -29,6 +32,7 @@ public class MembersService {
                     token
             );
         }
+        log.info("end");
         return null;
     }
 

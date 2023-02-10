@@ -6,6 +6,7 @@ import java.time.LocalDateTime;
 
 @Getter@Setter@ToString
 @AllArgsConstructor@NoArgsConstructor
+@Builder
 public class Todos {
     private Integer id;
     private Integer member_id;

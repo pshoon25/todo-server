@@ -1,9 +1,11 @@
 package com.todo.dev.domain.dto;
 
+import com.todo.dev.domain.request.SignUpRequest;
 import lombok.*;
 
 @Getter@Setter@ToString
 @AllArgsConstructor@NoArgsConstructor
+@Builder
 public class Members {
     private Integer id;
     private String member_id;

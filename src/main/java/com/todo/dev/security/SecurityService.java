@@ -1,6 +1,7 @@
-package com.todo.dev.config;
+package com.todo.dev.security;
 
 import com.todo.dev.domain.dto.Members;
+import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import lombok.AllArgsConstructor;
@@ -34,5 +35,16 @@ public class SecurityService {
                 .signWith(key)
                 .setExpiration(new Date(System.currentTimeMillis() + Long.parseLong(EXP_TIME)))
                 .compact();
+    }
+
+    public TokenInfo parseToken(String token){
+        Claims claims = Jwts
+                .parserBuilder()
+                .setSigningKey(DatatypeConverter.parseBase64Binary(SECRET_KEY))
+                .build()
+                .parseClaimsJws(token)
+                .getBody();
+        TokenInfo info = new TokenInfo().parseToken(claims);
+        return info;
     }
 }

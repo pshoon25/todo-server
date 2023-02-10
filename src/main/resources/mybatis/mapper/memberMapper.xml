@@ -10,4 +10,8 @@
         WHERE
             member_id = #{member_id} AND member_pw = #{member_pw}
     </select>
+    <insert id="insertMembers">
+        INSERT INTO members(member_id, member_pw,name, phone_number)
+        VALUES(#{member_id}, #{member_pw}, #{name}, #{phone_number})
+    </insert>
 </mapper>

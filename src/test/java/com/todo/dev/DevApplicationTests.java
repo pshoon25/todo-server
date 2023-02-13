@@ -1,7 +1,7 @@
 package com.todo.dev;
 
 import com.todo.dev.security.SecurityService;
-import com.todo.dev.domain.dto.Members;
+import com.todo.dev.domain.entity.Members;
 import com.todo.dev.domain.request.LoginRequest;
 import com.todo.dev.repository.MembersRepository;
 import com.todo.dev.security.TokenInfo;

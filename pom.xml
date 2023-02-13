@@ -42,8 +42,15 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-ui -->
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-ui</artifactId>
+			<version>1.6.14</version>
+		</dependency>
 
-<!--		security-->
+
+		<!--		security-->
 		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-aop -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

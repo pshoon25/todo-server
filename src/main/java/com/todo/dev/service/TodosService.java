@@ -1,8 +1,7 @@
 package com.todo.dev.service;
 
-import com.todo.dev.domain.dto.Todos;
+import com.todo.dev.domain.entity.Todos;
 import com.todo.dev.domain.dto.TodosPost;
-import com.todo.dev.domain.request.TodosPostRequest;
 import com.todo.dev.domain.response.HomeTodosResponse;
 import com.todo.dev.repository.TodosRepository;
 import lombok.RequiredArgsConstructor;

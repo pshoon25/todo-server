@@ -1,7 +1,6 @@
 package com.todo.dev.repository;
 
-import com.todo.dev.domain.dto.Todos;
-import com.todo.dev.domain.response.HomeTodosResponse;
+import com.todo.dev.domain.entity.Todos;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

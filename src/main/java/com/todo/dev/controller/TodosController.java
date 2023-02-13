@@ -1,6 +1,5 @@
 package com.todo.dev.controller;
 
-import com.todo.dev.domain.dto.Todos;
 import com.todo.dev.domain.dto.TodosPost;
 import com.todo.dev.domain.request.TodosPostRequest;
 import com.todo.dev.domain.response.HomeTodosResponse;

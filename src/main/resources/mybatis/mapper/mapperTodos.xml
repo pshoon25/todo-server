@@ -18,4 +18,10 @@
         WHERE member_id != #{member_id}
         ORDER BY create_date DESC
     </select>
+    <select id="myTodos" resultType="Todos">
+        SELECT id, create_date, content, checked
+        FROM todos
+        WHERE member_id = #{member_id}
+        ORDER BY create_date DESC
+    </select>
 </mapper>

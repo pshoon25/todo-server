@@ -3,6 +3,7 @@ package com.todo.dev.service;
 import com.todo.dev.domain.entity.Todos;
 import com.todo.dev.domain.dto.TodosPost;
 import com.todo.dev.domain.response.HomeTodosResponse;
+import com.todo.dev.domain.response.MyTodosResponse;
 import com.todo.dev.repository.TodosRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -35,6 +36,14 @@ public class TodosService {
         List<HomeTodosResponse> responses = todos.stream()
                 .map(HomeTodosResponse::new)
                 .collect(Collectors.toList()) ;
+        return responses;
+    }
+
+    public List<MyTodosResponse> myTodos(Integer member_id){
+        List<Todos> todos = todosRepository.myTodos(member_id);
+        List<MyTodosResponse> responses = todos.stream()
+                .map(MyTodosResponse::new)
+                .collect(Collectors.toList());
         return responses;
     }
 }

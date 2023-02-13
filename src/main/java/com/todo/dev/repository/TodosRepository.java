@@ -13,4 +13,6 @@ public interface TodosRepository {
     Integer check(Integer id, Integer member_id);
 
     List<Todos> allTodos(Integer member_id);
+
+    List<Todos> myTodos(Integer member_id);
 }

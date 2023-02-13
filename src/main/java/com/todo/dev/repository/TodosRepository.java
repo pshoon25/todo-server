@@ -1,5 +1,6 @@
 package com.todo.dev.repository;
 
+import com.todo.dev.domain.dto.FriendsTodos;
 import com.todo.dev.domain.entity.Todos;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -15,4 +16,5 @@ public interface TodosRepository {
     List<Todos> allTodos(Integer memberId);
 
     List<Todos> myTodos(Integer memberId);
+    List<FriendsTodos> myFriendTodos(Integer myId);
 }

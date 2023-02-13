@@ -6,4 +6,16 @@
         INSERT INTO todos(member_id, content)
         VALUES(#{member_id}, #{content})
     </insert>
+    <update id="check">
+        UPDATE todos
+        SET checked = CASE WHEN checked = 1 THEN 0
+        ELSE 1 END
+        WHERE id = #{id} AND member_id = #{member_id}
+    </update>
+    <select id="allTodos" resultType="Todos">
+        SELECT create_date, content, checked
+        FROM todos
+        WHERE member_id != #{member_id}
+        ORDER BY create_date DESC
+    </select>
 </mapper>

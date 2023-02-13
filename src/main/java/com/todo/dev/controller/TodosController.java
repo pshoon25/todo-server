@@ -28,7 +28,7 @@ public class TodosController {
         Integer memberId = securityService.parseToken(securityService.getToken()).getId();
         log.info(memberId.toString());
         TodosPost todosPost = TodosPost
-                .builder().member_id(memberId).content(request.getContent())
+                .builder().memberId(memberId).content(request.getContent())
                 .build();
         log.info(todosPost.toString());
         return todosService.insertTodoService(todosPost);

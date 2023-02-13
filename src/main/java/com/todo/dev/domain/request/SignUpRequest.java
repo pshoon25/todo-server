@@ -5,8 +5,8 @@ import lombok.*;
 @Getter@Setter@ToString
 @AllArgsConstructor@NoArgsConstructor
 public class SignUpRequest {
-    private String member_id;
-    private String member_pw;
+    private String memberId;
+    private String memberPw;
     private String name;
     private String phone_number;
 }

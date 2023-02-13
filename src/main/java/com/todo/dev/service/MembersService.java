@@ -37,7 +37,7 @@ public class MembersService {
     public MemberResponse signUpService(SignUpRequest request){
         Integer insertId = membersRepository.insertMembers(request);
         if(insertId!=null){
-            return loginService(new LoginRequest(request.getMember_id(), request.getMember_pw()));
+            return loginService(new LoginRequest(request.getMemberId(), request.getMemberPw()));
         }
         return null;
     }

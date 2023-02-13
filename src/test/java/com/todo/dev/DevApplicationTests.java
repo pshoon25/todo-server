@@ -51,8 +51,8 @@ class DevApplicationTests {
 		Members member = Members
 				.builder()
 				.id(1)
-				.member_id("park")
-				.member_pw("1234")
+				.memberId("park")
+				.memberPw("1234")
 				.name("park")
 				.phone_number("01022222222")
 				.build();

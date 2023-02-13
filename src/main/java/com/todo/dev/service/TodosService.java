@@ -24,23 +24,23 @@ public class TodosService {
         }
         return 0;
     }
-    public Integer checkTodo(Integer id, Integer member_id){
-        if (todosRepository.check(id, member_id) == 1){
+    public Integer checkTodo(Integer id, Integer memberId){
+        if (todosRepository.check(id, memberId) == 1){
             return id;
         }
         return 0;
     }
 
-    public List<HomeTodosResponse> homeTodos(Integer member_id){
-        List<Todos> todos = todosRepository.allTodos(member_id);
+    public List<HomeTodosResponse> homeTodos(Integer memberId){
+        List<Todos> todos = todosRepository.allTodos(memberId);
         List<HomeTodosResponse> responses = todos.stream()
                 .map(HomeTodosResponse::new)
                 .collect(Collectors.toList()) ;
         return responses;
     }
 
-    public List<MyTodosResponse> myTodos(Integer member_id){
-        List<Todos> todos = todosRepository.myTodos(member_id);
+    public List<MyTodosResponse> myTodos(Integer memberId){
+        List<Todos> todos = todosRepository.myTodos(memberId);
         List<MyTodosResponse> responses = todos.stream()
                 .map(MyTodosResponse::new)
                 .collect(Collectors.toList());

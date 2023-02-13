@@ -6,6 +6,7 @@ import java.time.LocalDateTime;
 
 @Getter@Setter@ToString
 @AllArgsConstructor@NoArgsConstructor
+@Builder
 public class Friends {
     private Integer myId;
     private Integer targetId;
